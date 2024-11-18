@@ -19,7 +19,28 @@
     </form>
     <?php
 
-    // Digitar PHP (1º Aqui)
+    // Verifica se o formulário foi enviado
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        // Recebe os valores enviados pelo formulário
+        $nome = $_POST['nome'];
+        $senha = $_POST['senha'];
+
+        // abre o arquivo usuarios.txt para escrita (adiciona dados ao final do arquivo)
+
+        $arquivo = fopen('usuarios.txt', 'a');
+
+        // cria uma linha com o nome e a senha separados por ";"
+
+        $linha = $nome . ';' . $senha . "\n";
+
+        // Escreve a linha no arquivo
+        fwrite($arquivo, $linha);
+
+        // fecha o arquivo
+        fclose($arquivo);
+
+        echo "<p> Usuário cadastrado com sucesso!</p>";
+    }
     
     ?>
 </body>
