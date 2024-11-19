@@ -30,7 +30,7 @@
         if(!empty($nome) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty ($mensagem)){
             echo "<p style='color:green;'>Feedback enviado com sucesso!</p>";
         }else{
-            echo "<p style='color: red;'> Por Favor, preencha todos oc campos corretamente.</p>";
+            echo "<p style='color: red;'> Por Favor, preencha todos os campos corretamente.</p>";
         }
     }
     
