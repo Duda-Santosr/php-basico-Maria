@@ -5,6 +5,7 @@
     <title>Formulário de Feedback</title>
 </head>
 <body>
+    <h2>Deixe sua opinião sobre o nosso atendimento:</h2>
     <form method="post" action="">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" required><br>
