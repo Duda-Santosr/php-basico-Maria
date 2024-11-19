@@ -29,6 +29,7 @@
         }
         
         $nome_arquivo = basename($_FILES['imagem']['name']);
+        $caminho_completo = $diretorio_destino . $nome_arquivo;
 
         // Move o arquivo enviado para o diretório de destino
         if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho_completo)) {
